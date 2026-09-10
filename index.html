@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<title>دعوت‌نامه عروسی بیتا و محمد جواد</title>
+<meta name="description" content="دعوت‌نامه دیجیتال عروسی بیتا و محمد جواد">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF6EE;
+    --white:#FFFFFF;
+    --gold:#AC8536;
+    --gold-deep:#8C6A25;
+    --gold-light:#D9C08E;
+    --champagne:#F1E6CC;
+    --ink:#3C3225;
+    --ink-soft:#8A7B62;
+    --line:#E3D5AE;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 50% 0%, #FFFDF8 0%, var(--cream) 55%, #F3ECDC 100%);
+    color:var(--ink);
+    font-family:'Vazirmatn', sans-serif;
+    font-weight:400;
+    line-height:1.9;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:28px 14px 40px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  .card{
+    width:100%;
+    max-width:460px;
+    position:relative;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:40px 30px 12px;
+    overflow:hidden;
+    box-shadow:0 30px 60px -30px rgba(140,106,37,0.28);
+  }
+
+  .card::before{
+    content:"";
+    position:absolute;
+    inset:10px;
+    border:1px solid var(--gold-light);
+    border-radius:2px;
+    pointer-events:none;
+  }
+
+  .corner{ position:absolute; width:54px; height:54px; opacity:0.9; pointer-events:none; z-index:2; }
+  .corner svg{width:100%;height:100%;}
+  .corner-tr{top:16px; right:16px; transform:scaleX(-1);}
+  .corner-tl{top:16px; left:16px;}
+  .corner-br{bottom:16px; right:16px; transform:scale(-1,-1);}
+  .corner-bl{bottom:16px; left:16px; transform:scaleY(-1);}
+
+  .inner{ position:relative; z-index:1; }
+
+  /* ---------- Hero ---------- */
+  .eyebrow{
+    text-align:center;
+    font-size:13px;
+    letter-spacing:1px;
+    color:var(--gold-deep);
+    margin:6px 0 20px;
+    opacity:0;
+    animation:riseIn 900ms ease forwards;
+    animation-delay:100ms;
+  }
+
+  .photo-frame{
+    position:relative;
+    width:100%;
+    max-width:280px;
+    margin:0 auto;
+    padding:8px;
+    background:linear-gradient(160deg, var(--gold-light), var(--gold) 55%, var(--gold-light));
+    border-radius:50% / 42%;
+    opacity:0;
+    animation:riseIn 1100ms ease forwards;
+    animation-delay:220ms;
+  }
+  .photo-frame .photo-inner{
+    border-radius:50% / 42%;
+    overflow:hidden;
+    border:2px solid var(--white);
+  }
+  .photo-frame img{
+    display:block;
+    width:100%;
+    height:360px;
+    object-fit:cover;
+    object-position:center 25%;
+  }
+
+  .names{
+    text-align:center;
+    font-family:'Aref Ruqaa', serif;
+    font-size:40px;
+    color:var(--ink);
+    margin:22px 0 0;
+    line-height:1.4;
+    opacity:0;
+    animation:riseIn 1000ms ease forwards;
+    animation-delay:440ms;
+  }
+  .names .heart{ color:var(--gold); font-size:24px; margin:0 8px; vertical-align:middle; }
+
+  .poem{
+    text-align:center;
+    font-family:'Aref Ruqaa', serif;
+    font-size:18px;
+    color:var(--ink-soft);
+    margin:16px auto 0;
+    max-width:300px;
+    line-height:2.1;
+    opacity:0;
+    animation:riseIn 1000ms ease forwards;
+    animation-delay:620ms;
+  }
+
+  @keyframes riseIn{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+
+  .divider{
+    display:flex; align-items:center; gap:14px; margin:32px 0; color:var(--gold-light);
+  }
+  .divider::before, .divider::after{ content:""; flex:1; height:1px; background:linear-gradient(90deg, transparent, var(--line)); }
+  .divider::after{ background:linear-gradient(90deg, var(--line), transparent); }
+  .divider .glyph{ width:8px; height:8px; border:1px solid var(--gold); transform:rotate(45deg); display:inline-block; }
+
+  /* ---------- Countdown ---------- */
+  .section-title{
+    text-align:center;
+    font-family:'Aref Ruqaa', serif;
+    font-size:22px;
+    color:var(--ink);
+    margin:0 0 20px;
+  }
+
+  .countdown{ display:flex; justify-content:center; gap:10px; }
+  .cd-box{
+    flex:1; max-width:80px; text-align:center;
+    background:var(--cream); border:1px solid var(--line); border-radius:6px;
+    padding:12px 4px 10px;
+  }
+  .cd-num{
+    font-size:26px; font-weight:600; color:var(--gold-deep);
+    font-variant-numeric:tabular-nums; display:block;
+  }
+  .cd-label{ font-size:12px; color:var(--ink-soft); margin-top:4px; display:block; }
+  .cd-done{
+    text-align:center; font-family:'Aref Ruqaa', serif; font-size:22px;
+    color:var(--gold-deep); padding:14px 0;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    width:100%; min-height:54px; text-decoration:none;
+    font-size:16px; font-weight:600; border-radius:30px; cursor:pointer; border:none;
+    -webkit-tap-highlight-color:transparent;
+    transition:transform 220ms ease, box-shadow 220ms ease;
+    margin:24px 0 0;
+  }
+  .btn:active{ transform:scale(0.97); }
+  .btn-primary{
+    background:linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+    color:var(--white);
+    box-shadow:0 14px 30px -12px rgba(140,106,37,0.55);
+  }
+  .btn-primary:hover{ box-shadow:0 18px 36px -12px rgba(140,106,37,0.7); }
+  .btn-outline{
+    background:var(--white); color:var(--gold-deep); border:1.5px solid var(--gold-light);
+  }
+  .btn-outline:hover{ background:var(--champagne); }
+
+  /* ---------- Info ---------- */
+  .info-list{ list-style:none; margin:0; padding:0; }
+  .info-item{
+    display:flex; align-items:flex-start; gap:12px; padding:14px 0;
+    border-bottom:1px dashed var(--line); font-size:15.5px;
+  }
+  .info-item:last-child{ border-bottom:none; }
+  .info-icon{ font-size:19px; line-height:1.6; flex-shrink:0; }
+
+  /* ---------- RSVP ---------- */
+  .rsvp-intro{ text-align:center; font-size:15.5px; color:var(--ink); margin:0 0 20px; }
+  .rsvp-options{ display:flex; flex-direction:column; gap:12px; }
+  .rsvp-option{
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    width:100%; padding:15px 10px; border-radius:14px; border:1.5px solid var(--line);
+    background:var(--cream); color:var(--ink); font-size:15px; font-weight:500;
+    text-decoration:none; transition:border-color 200ms ease, background 200ms ease, transform 200ms ease;
+  }
+  .rsvp-option:active{ transform:scale(0.98); }
+  .rsvp-yes:hover{ border-color:var(--gold); background:var(--champagne); }
+  .rsvp-no:hover{ border-color:var(--gold-light); background:var(--champagne); }
+  .rsvp-note{ text-align:center; font-size:13px; color:var(--ink-soft); margin:16px 0 0; }
+
+  /* ---------- Families & closing ---------- */
+  .families{
+    text-align:center; font-family:'Aref Ruqaa', serif; font-size:20px; color:var(--ink); margin:0;
+  }
+  .closing{ text-align:center; margin-top:26px; }
+  .closing p{ margin:6px 0; font-size:14.5px; color:var(--ink-soft); }
+  .closing .farewell{
+    font-family:'Aref Ruqaa', serif; font-size:20px; color:var(--gold-deep); margin-top:14px;
+  }
+
+  /* ---------- Signature ---------- */
+  .signature{
+    text-align:center;
+    padding:18px 10px 10px;
+    margin-top:6px;
+  }
+  .signature span{
+    font-size:10.5px;
+    letter-spacing:0.3px;
+    color:var(--gold-light);
+    opacity:0.85;
+    font-family:'Vazirmatn', sans-serif;
+    font-weight:400;
+  }
+</style>
+</head>
+<body>
+
+<main class="card">
+  <div class="corner corner-tr"><svg viewBox="0 0 60 60" fill="none"><path d="M2 2 C 20 2, 30 6, 34 20 C 37 30, 45 36, 58 36" stroke="#AC8536" stroke-width="1" stroke-linecap="round"/><circle cx="34" cy="20" r="2" fill="#AC8536"/></svg></div>
+  <div class="corner corner-tl"><svg viewBox="0 0 60 60" fill="none"><path d="M2 2 C 20 2, 30 6, 34 20 C 37 30, 45 36, 58 36" stroke="#AC8536" stroke-width="1" stroke-linecap="round"/><circle cx="34" cy="20" r="2" fill="#AC8536"/></svg></div>
+  <div class="corner corner-br"><svg viewBox="0 0 60 60" fill="none"><path d="M2 2 C 20 2, 30 6, 34 20 C 37 30, 45 36, 58 36" stroke="#AC8536" stroke-width="1" stroke-linecap="round"/><circle cx="34" cy="20" r="2" fill="#AC8536"/></svg></div>
+  <div class="corner corner-bl"><svg viewBox="0 0 60 60" fill="none"><path d="M2 2 C 20 2, 30 6, 34 20 C 37 30, 45 36, 58 36" stroke="#AC8536" stroke-width="1" stroke-linecap="round"/><circle cx="34" cy="20" r="2" fill="#AC8536"/></svg></div>
+
+  <div class="inner">
+
+    <!-- 1. Hero -->
+    <p class="eyebrow">به نام عشق</p>
+
+    <div class="photo-frame">
+      <div class="photo-inner">
+        <img src="assets/wedding.jpg" alt="بیتا و محمد جواد" loading="eager">
+      </div>
+    </div>
+
+    <h1 class="names">بیتا<span class="heart">♥</span>محمد جواد</h1>
+    <p class="poem">تو نوبرانه یک عمر انتظار منی<br>خوشا به بخت بلندم که در کنار منی</p>
+
+    <div class="divider"><span class="glyph"></span></div>
+
+    <!-- 2. Countdown -->
+    <h2 class="section-title">تا شروع مراسم</h2>
+    <div class="countdown" id="countdown">
+      <div class="cd-box"><span class="cd-num" id="cd-days">۰۰</span><span class="cd-label">روز</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-hours">۰۰</span><span class="cd-label">ساعت</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-minutes">۰۰</span><span class="cd-label">دقیقه</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-seconds">۰۰</span><span class="cd-label">ثانیه</span></div>
+    </div>
+    <p class="cd-done" id="cd-done" style="display:none;">🎉 مراسم آغاز شد!</p>
+
+    <!-- 3. Invitation card button -->
+    <a class="btn btn-primary" href="https://DigiPostal.ir/cpaymun" target="_blank" rel="noopener noreferrer">💌 مشاهده کارت دعوت</a>
+
+    <div class="divider"><span class="glyph"></span></div>
+
+    <!-- 4. Ceremony info -->
+    <h2 class="section-title">اطلاعات مراسم</h2>
+    <ul class="info-list">
+      <li class="info-item"><span class="info-icon">📅</span><span>جمعه سوم مهرماه ۱۴۰۵</span></li>
+      <li class="info-item"><span class="info-icon">🕖</span><span>از ساعت ۱۹ الی ۲۳</span></li>
+      <li class="info-item"><span class="info-icon">🍰</span><span>به صرف شیرینی و شام</span></li>
+      <li class="info-item"><span class="info-icon">📍</span><span>سمنان، میدان معلم، تالار فریال</span></li>
+    </ul>
+
+    <!-- 5. Routing -->
+    <a class="btn btn-outline" href="https://maps.app.goo.gl/rvVHCir4K4psmPsp9?g_st=ic" target="_blank" rel="noopener noreferrer">🗺️ مسیریابی</a>
+
+    <div class="divider"><span class="glyph"></span></div>
+
+    <!-- 6. RSVP -->
+    <h2 class="section-title">آیا به مراسم عروسی ما تشریف می‌آورید؟</h2>
+    <div class="rsvp-options">
+      <a class="rsvp-option rsvp-yes" href="https://survey.porsline.ir/s/qD1AN9K6" target="_blank" rel="noopener noreferrer">❤️ بله، حتماً می‌آیم</a>
+      <a class="rsvp-option rsvp-no" href="https://survey.porsline.ir/s/qD1AN9K6" target="_blank" rel="noopener noreferrer">🤍 خیر، متأسفانه نمی‌توانم بیایم</a>
+    </div>
+    <a class="btn btn-primary" href="https://survey.porsline.ir/s/qD1AN9K6" target="_blank" rel="noopener noreferrer">💌 اعلام حضور</a>
+    <p class="rsvp-note">لطفاً پاسخ خود را ثبت کنید تا در برنامه‌ریزی مراسم به ما کمک کنید.</p>
+
+    <div class="divider"><span class="glyph"></span></div>
+
+    <!-- 7. Families -->
+    <p class="families">فرید پور &nbsp;–&nbsp; شربتی نژاد</p>
+
+    <!-- 8. Closing -->
+    <div class="closing">
+      <p>اگر تشریف نمیارید، لطفاً اطلاع بدید.</p>
+      <p class="farewell">چشم‌انتظار دیدار شما هستیم ♡</p>
+    </div>
+
+    <!-- Designer signature -->
+    <div class="signature"><span>Designed &amp; Developed by Eng. Alireza Noora © 2026</span></div>
+
+  </div>
+</main>
+
+<script>
+(function(){
+  "use strict";
+
+  var persianDigits = ["۰","۱","۲","۳","۴","۵","۶","۷","۸","۹"];
+
+  function toPersianNumber(num){
+    var str = String(Math.max(0, Math.floor(num)));
+    if(str.length < 2){ str = "0" + str; }
+    var out = "";
+    for(var i = 0; i < str.length; i++){
+      var ch = str[i];
+      out += (ch >= "0" && ch <= "9") ? persianDigits[parseInt(ch, 10)] : ch;
+    }
+    return out;
+  }
+
+  // Friday, 3 Mehr 1405 == 25 September 2026, 19:00, Asia/Tehran (+03:30)
+  var targetDate = new Date("2026-09-25T19:00:00+03:30");
+
+  var elDays = document.getElementById("cd-days");
+  var elHours = document.getElementById("cd-hours");
+  var elMinutes = document.getElementById("cd-minutes");
+  var elSeconds = document.getElementById("cd-seconds");
+  var elCountdown = document.getElementById("countdown");
+  var elDone = document.getElementById("cd-done");
+
+  function render(){
+    var now = new Date();
+    var diff = targetDate.getTime() - now.getTime();
+
+    if(diff <= 0){
+      elCountdown.style.display = "none";
+      elDone.style.display = "block";
+      clearInterval(timer);
+      return;
+    }
+
+    var totalSeconds = Math.floor(diff / 1000);
+    var days = Math.floor(totalSeconds / 86400);
+    var hours = Math.floor((totalSeconds % 86400) / 3600);
+    var minutes = Math.floor((totalSeconds % 3600) / 60);
+    var seconds = totalSeconds % 60;
+
+    elDays.textContent = toPersianNumber(days);
+    elHours.textContent = toPersianNumber(hours);
+    elMinutes.textContent = toPersianNumber(minutes);
+    elSeconds.textContent = toPersianNumber(seconds);
+  }
+
+  render();
+  var timer = setInterval(render, 1000);
+})();
+</script>
+
+</body>
+</html>
